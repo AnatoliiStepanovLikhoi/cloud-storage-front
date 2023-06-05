@@ -1,15 +1,15 @@
 import React from "react";
 import styles from "./Auth.module.scss";
 import { Button, Form, Input, notification } from "antd";
-import { LoginFormDTO } from "@/api/dto/auth.dto";
+import { RegisterFormDTO } from "@/api/dto/auth.dto";
 
 import * as Api from "@/api";
 import { setCookie } from "nookies";
 
-export const LoginForm: React.FC = () => {
-  const onSubmit = async (values: LoginFormDTO) => {
+export const RegisterForm: React.FC = () => {
+  const onSubmit = async (values: RegisterFormDTO) => {
     try {
-      const { token } = await Api.auth.login(values);
+      const { token } = await Api.auth.register(values);
 
       notification.success({
         message: "Success!",
@@ -39,7 +39,15 @@ export const LoginForm: React.FC = () => {
         <Form.Item
           label="E-Mail"
           name="email"
-          rules={[{ required: true, message: "Please input your email!" }]}
+          rules={[{ required: true, message: "Please enter your email!" }]}
+        >
+          <Input />
+        </Form.Item>
+
+        <Form.Item
+          label="Full name"
+          name="fullName"
+          rules={[{ required: true, message: "Please enter your full name!" }]}
         >
           <Input />
         </Form.Item>
@@ -54,7 +62,7 @@ export const LoginForm: React.FC = () => {
 
         <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
           <Button type="primary" htmlType="submit">
-            Submit
+            Register
           </Button>
         </Form.Item>
       </Form>
