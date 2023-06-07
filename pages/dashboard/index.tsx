@@ -1,6 +1,5 @@
 import { GetServerSidePropsContext, NextPage } from "next";
 import nookies from "nookies";
-import * as Api from "@/api";
 import { checkAuth } from "@/utils/checkAuth";
 import { Layout } from "@/layouts/Layout";
 import { NextPageWithLayout } from "../types";
@@ -13,6 +12,7 @@ import {
   FileImageOutlined,
   FileOutlined,
 } from "@ant-design/icons";
+import { UploadButton } from "@/components/UploadButton";
 
 interface Props {
   // items: FileItem[];
@@ -25,7 +25,7 @@ const DashboardPage: NextPageWithLayout<Props> = ({}) => {
   return (
     <main className={styles.dashboardContainer}>
       <div className={styles.sidebar}>
-        <Button>Upload</Button>
+        <UploadButton />
         <Menu
           className={styles.menu}
           mode="inline"
