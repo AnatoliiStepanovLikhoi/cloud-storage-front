@@ -3,10 +3,12 @@ import { GetServerSidePropsContext, NextPage } from "next";
 import nookies from "nookies";
 import * as Api from "@/api";
 import { checkAuth } from "@/utils/checkAuth";
+import { Header } from "@/components/Header";
 
 const DashboardPage: NextPage = () => {
   return (
     <main>
+      <Header />
       <h1>Dashboard page</h1>
     </main>
   );
