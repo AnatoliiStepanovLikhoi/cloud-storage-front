@@ -11,7 +11,7 @@ export const UploadButton: React.FC = () => {
     try {
       const file = await Api.files.uploadFile(options);
 
-      console.log(file);
+      setFileList([]);
     } catch (error) {
       notification.error({
         message: "Error",
