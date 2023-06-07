@@ -34,7 +34,7 @@ export const Header: React.FC = () => {
             onSelect={({ key }) => router.push(key)}
             items={[
               { key: "/dashboard", label: "Main" },
-              { key: "/dashvoard/profile", label: "Profile" },
+              { key: "/dashboard/profile", label: "Profile" },
             ]}
           />
         </div>
