@@ -12,6 +12,7 @@ const AuthPage: NextPage = () => {
       </Head>
       <main style={{ width: 400, margin: "50px auto" }}>
         <Tabs
+          // activeKey="2"
           items={[
             { label: "Login", key: "1", children: <LoginForm /> },
             {

@@ -12,7 +12,7 @@ interface Props {
   items: FileItem[];
 }
 
-const DashboardPage: NextPageWithLayout<Props> = ({ items }) => {
+const DashboardPhotos: NextPageWithLayout<Props> = ({ items }) => {
   return (
     <DashboardLayout>
       <FileList items={items}></FileList>
@@ -20,8 +20,8 @@ const DashboardPage: NextPageWithLayout<Props> = ({ items }) => {
   );
 };
 
-DashboardPage.getLayout = (page: React.ReactNode) => {
-  return <Layout title="Dashboard / Main">{page}</Layout>;
+DashboardPhotos.getLayout = (page: React.ReactNode) => {
+  return <Layout title="Dashboard / Photos">{page}</Layout>;
 };
 
 export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
@@ -32,7 +32,7 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
   }
 
   try {
-    const items = await Api.files.getAll();
+    const items = await Api.files.getAll("photos");
 
     return {
       props: {
@@ -50,4 +50,4 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
   }
 };
 
-export default DashboardPage;
+export default DashboardPhotos;
