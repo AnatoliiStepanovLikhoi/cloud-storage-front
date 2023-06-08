@@ -6,6 +6,6 @@ export interface FileItem {
   size: number;
   mimetype: string;
   user: User;
-  deletedAt: string | null;
+  deletedat: string | null;
   id: number;
 }

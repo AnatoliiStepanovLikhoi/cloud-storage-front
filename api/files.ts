@@ -7,8 +7,8 @@ export const getAll = async (type: FileType = "all"): Promise<FileItem[]> => {
   return (await axios.get("/files?type=" + type)).data;
 };
 
-export const remove = (ids: number[]): Promise<void> => {
-  return axios.get("/files?ids=" + ids);
+export const remove = async (ids: number[]): Promise<void> => {
+  return await axios.delete("/files?ids=" + ids);
 };
 
 export const uploadFile = async (options: any) => {
