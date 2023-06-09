@@ -28,8 +28,7 @@ jobs:
           touch out/.nojekyll
 
       - name: Deploy
-        # https://github.com/JamesIves/github-pages-deploy-action
-        uses: AnatoliiStepanovLikhoi/cloud-storage-front@4.4.0
+        uses: AnatoliiStepanovLikhoi/cloud-storage-front
         with:
           branch: gh-pages
           folder: out
