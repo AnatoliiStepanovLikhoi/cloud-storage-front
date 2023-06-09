@@ -2,7 +2,7 @@ import axios from "axios";
 import { parseCookies } from "nookies";
 import { config } from "process";
 
-axios.defaults.baseURL = "http://localhost:4000";
+axios.defaults.baseURL = "https://cloudstorage-lx0r.onrender.com";
 
 axios.interceptors.request.use((config) => {
   if (typeof window !== "undefined") {

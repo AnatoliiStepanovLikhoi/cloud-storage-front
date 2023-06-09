@@ -16,7 +16,9 @@ export const FileCard: React.FC<FileCardProps> = ({
 }) => {
   const ext = getExtentionFromFileName(filename);
   const imageUrl =
-    ext && isImage(ext) ? "http://localhost:4000/uploads/" + filename : "";
+    ext && isImage(ext)
+      ? `https://cloudstorage-lx0r.onrender.com/uploads/${filename}`
+      : "";
 
   const color = getColorByExtension(ext);
   const classColor = styles[color];
