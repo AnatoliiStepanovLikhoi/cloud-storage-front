@@ -22,20 +22,20 @@ const DashboardProfilePage: NextPageWithLayout<Props> = ({ userData }) => {
   return (
     <main>
       <div className={styles.root}>
-        <h1>Мой профиль</h1>
+        <h1>My profile</h1>
         <br />
         <p>
           ID: <b>{userData.id}</b>
         </p>
         <p>
-          Полное имя: <b>{userData.fullName}</b>
+          Name: <b>{userData.fullName}</b>
         </p>
         <p>
           E-Mail: <b>{userData.email}</b>
         </p>
         <br />
         <Button onClick={onClickLogout} type="primary" danger>
-          Выйти
+          Logout
         </Button>
       </div>
     </main>

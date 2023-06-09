@@ -1,6 +1,5 @@
 import axios from "axios";
 import { parseCookies } from "nookies";
-import { config } from "process";
 
 axios.defaults.baseURL = "https://cloudstorage-lx0r.onrender.com";
 

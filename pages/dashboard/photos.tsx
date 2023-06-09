@@ -5,7 +5,6 @@ import { Layout } from "@/layouts/Layout";
 import { NextPageWithLayout } from "../../core/types";
 
 import { FileItem } from "@/api/dto/files.dto";
-import { FileList } from "@/components/FileList";
 import { DashboardLayout } from "@/layouts/DashboardLayout";
 import { Files } from "@/module/Files";
 

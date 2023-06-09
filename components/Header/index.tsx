@@ -5,7 +5,6 @@ import styles from "./Header.module.scss";
 import * as Api from "@/api";
 
 import { useRouter } from "next/router";
-import { checkAuth } from "@/utils/checkAuth";
 
 export const Header: React.FC = ({}) => {
   const router = useRouter();
