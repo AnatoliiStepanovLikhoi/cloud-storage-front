@@ -45,7 +45,7 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import React from "react";
-import { NextPageWithLayout } from "./types"; // Вкажіть правильний шлях до вашого файлу з типами
+import { NextPageWithLayout } from "../core/types"; // Вкажіть правильний шлях до вашого файлу з типами
 
 type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;

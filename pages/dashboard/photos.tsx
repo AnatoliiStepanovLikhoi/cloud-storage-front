@@ -2,7 +2,7 @@ import { GetServerSidePropsContext, NextPage } from "next";
 import * as Api from "@/api";
 import { checkAuth } from "@/utils/checkAuth";
 import { Layout } from "@/layouts/Layout";
-import { NextPageWithLayout } from "../types";
+import { NextPageWithLayout } from "../../core/types";
 
 import { FileItem } from "@/api/dto/files.dto";
 import { FileList } from "@/components/FileList";

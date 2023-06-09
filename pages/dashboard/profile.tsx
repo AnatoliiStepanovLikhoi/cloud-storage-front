@@ -1,4 +1,4 @@
-import { NextPageWithLayout } from "../types";
+import { NextPageWithLayout } from "../../core/types";
 import { User } from "@/api/dto/auth.dto";
 import { checkAuth } from "@/utils/checkAuth";
 import { Button } from "antd";
