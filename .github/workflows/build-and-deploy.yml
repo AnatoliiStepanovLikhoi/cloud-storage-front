@@ -28,6 +28,7 @@ jobs:
           touch out/.nojekyll
 
       - name: Deploy
+        # https://github.com/AnatoliiStepanovLikhoi/cloud-storage-front
         uses: AnatoliiStepanovLikhoi/cloud-storage-front
         with:
           branch: gh-pages
