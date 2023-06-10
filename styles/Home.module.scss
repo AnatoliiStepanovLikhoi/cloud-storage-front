@@ -1,15 +1,35 @@
 .main {
-  width: 1200px;
+  // width: 1200px;
   margin: 40px auto;
+  h1 {
+    padding: 20px;
+  }
 
-  text-align: center;
+  @media screen and (min-width: 375px) {
+    width: 375px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 1200px;
+  }
 }
 
 .sidebar {
   display: flex;
   flex-direction: column;
-  width: 250px;
   padding: 20px;
+
+  @media screen and (min-width: 375px) {
+    width: 200px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 250px;
+  }
 }
 
 .upload {
