@@ -1,6 +1,8 @@
 .main {
   // width: 1200px;
   margin: 40px auto;
+  text-align: center;
+
   h1 {
     padding: 20px;
   }
@@ -11,6 +13,7 @@
 
   @media screen and (min-width: 768px) {
     width: 768px;
+    text-align: start;
   }
 
   @media screen and (min-width: 1440px) {
